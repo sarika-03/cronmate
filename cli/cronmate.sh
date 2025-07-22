@@ -1,17 +1,14 @@
 #!/bin/bash
 
-echo "enter your name" -p
-read name 
+read -p "enter your name"
+echo $name
+read -p "enter tha task name"
+echo $task
+read -p  "please enter the scedule" 
+echo $schedule
+read -p  "please enter the command you want to run"
+echo $command 
 
-echo "please enter the task you want to perform" -p
-read task
-
-echo "please enter the scedule" -p
-read schedule 
-
-echo "please enter the command you want to run" -p
-read command
-
-json_output=$(printf '{"name": "%s", "task": "%s", "schedule": "%s", "command": "%s"}' "$name" "$task" "$schedule" "command")
+json_output=$(printf '{"name": "%s", "task": "%s", "schedule": "%s", "command": "%s"}' "$name" "$task" "$schedule" "$command")
 echo "$json_output" | jq . > output.json
 
