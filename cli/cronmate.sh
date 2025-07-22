@@ -1,12 +1,12 @@
 #!/bin/bash
 
-read -p "enter your name"
-echo $name
-read -p "enter tha task name"
+read -p "enter your name" name
+echo $name 
+read -p "enter tha task name" task
 echo $task
-read -p  "please enter the scedule" 
+read -p  "please enter the scedule" schedule  
 echo $schedule
-read -p  "please enter the command you want to run"
+read -p  "please enter the command you want to run" command
 echo $command 
 
 jq -n \
