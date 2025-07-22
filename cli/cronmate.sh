@@ -1,7 +1,14 @@
 #!/bin/bash
 
 read -p "enter your name" name
-echo $name 
+reg="^[a-zA-Z0-9-@]*?"
+if [[ -z $name ]] then
+echo "sorry kudos name is mandatory"
+else if [[ $name != $reg ]] then
+echo "please enter valid input"
+else
+echo $name
+fi 
 read -p "enter tha task name" task
 echo $task
 read -p  "please enter the scedule" schedule  
