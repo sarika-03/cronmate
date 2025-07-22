@@ -9,6 +9,10 @@ echo $schedule
 read -p  "please enter the command you want to run"
 echo $command 
 
-json_output=$(printf '{"name": "%s", "task": "%s", "schedule": "%s", "command": "%s"}' "$name" "$task" "$schedule" "$command")
-echo "$json_output" | jq . > output.json
+jq -n \
+  --arg name "$name" \
+  --arg task "$task" \
+  --arg schedule "$schedule" \
+  --arg command "$command" \
+  '{name: $name, task: $task, schedule: $schedule, command: $command}' > output.json
 
