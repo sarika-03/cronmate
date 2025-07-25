@@ -1,0 +1,46 @@
+# === System files ===
+.DS_Store         # macOS trash
+Thumbs.db         # Windows
+*.swp             # Vim/Vi swap files
+*.swo             # Vim backup
+
+# === Editor/IDE files ===
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# === Logs and temp files ===
+*.log
+*.tmp
+*.bak
+*.old
+
+# === Output or cache ===
+__pycache__/
+*.pyc
+*.out
+*.o
+*.a
+
+# === Bash history & personal scripts ===
+.bash_history
+.bashrc
+
+# === Docker related (runtime only) ===
+*.pid
+*.sock
+
+# === Secrets and environment ===
+.env
+*.env
+secrets.json
+config.json
+
+# === Project-specific ===
+output.json
+taskdata.json     # if your app saves task info here
+*.db              # if any SQLite DB is used
+
+# === Backup ===
+*~
