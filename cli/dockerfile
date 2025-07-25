@@ -1,5 +1,5 @@
 FROM alpine:latest
-WORKDIR . .
+WORKDIR /app
 COPY . .
 RUN apk add --no-cache \
     bash \
